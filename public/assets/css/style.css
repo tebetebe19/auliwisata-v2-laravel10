@@ -1,0 +1,485 @@
+#hero,
+#package,
+#gallery,
+#partner,
+#foottop {
+  padding: 100px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+button {
+  border-radius: 4px;
+  border-color: transparent;
+  color: white;
+}
+
+.btn-green {
+  background-color: #265b63;
+  padding: 8px 24px;
+  color: white;
+}
+.btn-green:hover {
+  color: white;
+}
+
+.btn-orange {
+  background-color: #ff7a07;
+  padding: 8px 24px;
+  color: white;
+}
+.btn-orange:hover {
+  color: white;
+}
+
+.section-title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-family: "Kanit", sans-serif;
+  font-weight: bolder;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+nav {
+  z-index: 10;
+  font-family: "Kanit", sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #5b5b5b;
+}
+nav .navbar-toggler {
+  border: none;
+}
+nav .navbar-toggler i {
+  color: #5b5b5b;
+}
+nav img {
+  width: 200px;
+}
+nav ul {
+  font-weight: bolder;
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  gap: 60px;
+  color: #5b5b5b;
+}
+nav ul .nav-link {
+  padding: 0px !important;
+  color: #5b5b5b;
+}
+@media (max-width: 991px) {
+  nav ul {
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+#hero {
+  background-color: #f7fdff;
+  font-family: "Kanit", sans-serif;
+}
+#hero .information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero .information .bag {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+#hero .information .bag h1 {
+  font-size: 64px;
+}
+#hero .information .bag h1 span {
+  color: #ff7a07;
+}
+#hero .information .bag button {
+  width: 30%;
+}
+#hero .information .bag .point {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  gap: 16px;
+  color: #5b5b5b;
+}
+#hero .information .bag .point span {
+  color: #d8d8d8;
+}
+#hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+#package .row > div {
+  margin-bottom: 24px;
+}
+#package .row > div .card {
+  font-family: "Lato", sans-serif;
+  border-radius: 8px;
+  border-color: transparent;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+}
+#package .row > div .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#package .row > div .card .card-body .card-img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px !important;
+  margin-bottom: 8px;
+}
+#package .row > div .card .card-body .card-title {
+  font-weight: bolder;
+}
+#package .row > div .card .card-body .card-information {
+  font-size: smaller;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  letter-spacing: 1px;
+  color: #5b5b5b;
+  margin-bottom: 8px;
+}
+#package .row > div .card .card-body .card-information i {
+  margin-right: 5px;
+}
+#package .row > div .card .card-body .card-allotment .progress {
+  height: 6px;
+}
+#package .row > div .card .card-body .card-allotment .progress .progress-bar {
+  background-color: #265b63;
+}
+#package .row > div .card .card-body .card-allotment p {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+#package .row > div .card .card-body hr {
+  color: #ff7a07;
+  height: 2px;
+  width: 25%;
+  opacity: 100%;
+  margin: 0px;
+}
+#package .row > div .card .card-body .card-price {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #ff7a07;
+}
+#package .row > div .card .card-body .card-price del {
+  font-weight: lighter;
+  font-size: 14px;
+  color: #535558;
+}
+
+#gallery {
+  background-color: #020c11;
+}
+#gallery h1 {
+  color: white;
+}
+#gallery .images {
+  display: grid;
+  grid-template-rows: masonry;
+  grid-template-areas: "one one one    two two three three four four four" "five five five two two three three four four four" "five five five six six six six     four four four" "five five five six six six six     seven seven seven";
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+}
+#gallery .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#gallery .images .item1 {
+  grid-area: one;
+}
+#gallery .images .item2 {
+  grid-area: two;
+}
+#gallery .images .item3 {
+  grid-area: three;
+}
+#gallery .images .item4 {
+  grid-area: four;
+}
+#gallery .images .item5 {
+  grid-area: five;
+}
+#gallery .images .item6 {
+  grid-area: six;
+}
+#gallery .images .item7 {
+  grid-area: seven;
+}
+
+#partner {
+  background-color: #f7fdff;
+  text-align: center;
+}
+#partner h1 {
+  text-align: left;
+}
+#partner hr {
+  color: #ff7a07;
+  height: 2px;
+  width: 25%;
+  opacity: 100%;
+  margin-bottom: 24px;
+}
+#partner .col-4 {
+  margin-bottom: 24px;
+}
+#partner img {
+  width: 80%;
+  mix-blend-mode: multiply;
+}
+
+footer {
+  background-color: #020c11;
+  color: #fafafa;
+}
+footer #foottop img {
+  width: 30%;
+  margin-bottom: 30px;
+}
+footer #foottop ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer #foottop ul a {
+  text-decoration: none;
+  color: inherit;
+}
+footer #foottop .bag {
+  margin-top: 10px;
+  display: flex;
+}
+footer #foottop .bag input {
+  border: 1px solid rgba(226, 226, 226, 0.2);
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 10px 0px 14px 20px;
+  width: 100%;
+  margin-right: 16px;
+}
+footer #foottop .footline {
+  background-color: #ff7a07;
+  color: white;
+}
+footer #footline {
+  background-color: #ff7a07;
+  padding: 16px 0px;
+}
+footer #footline .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #footline .icons {
+  display: flex;
+  gap: 20px;
+}
+
+#detail .row > div {
+  margin-bottom: 24px;
+}
+#detail .row > div .hero {
+  object-fit: cover;
+  border-radius: 8px;
+  aspect-ratio: 4/1;
+  width: 100%;
+}
+#detail .row > div .splide .splide__slide img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.accordion {
+  font-family: "Lato", sans-serif;
+  color: #222222;
+}
+.accordion .accordion-item {
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+}
+.accordion .accordion-item .accordion-header .accordion-button {
+  background-color: white;
+  font-weight: bolder;
+  padding: 0px !important;
+}
+.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: #222222;
+}
+.accordion .accordion-item .accordion-body {
+  margin-top: 1rem;
+  padding: 0px;
+}
+.accordion .accordion-item .accordion-body > div {
+  margin-bottom: 40px;
+}
+.accordion .accordion-item .accordion-body .item-title {
+  font-weight: bolder;
+}
+.accordion .accordion-item .accordion-body .item-title hr {
+  width: 15%;
+  height: 2px;
+  margin: 5px 0px;
+  color: #ff7a07;
+}
+
+.card-flight {
+  margin-bottom: 10px;
+}
+.card-flight .airlines {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.card-flight .airlines .bag img {
+  width: 100px;
+  object-fit: cover;
+}
+.card-flight .airlines .airlines-class {
+  color: #5b5b5b;
+  background-color: #ebebeb;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: smaller;
+}
+.card-flight .schedule {
+  color: #5b5b5b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-flight .schedule .flight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-flight .schedule .flight .flight-icon {
+  background-color: #eeeeee;
+  color: #265b63;
+  border-radius: 100%;
+  padding: 10px 8px;
+  margin-right: 10px;
+}
+.card-flight .schedule .separator {
+  flex: 1;
+  border: 1px dashed rgb(128, 128, 128);
+  width: 10%;
+}
+.card-flight .schedule .duration {
+  width: 150px;
+  font-size: smaller;
+  color: white;
+  text-align: center;
+  background-color: #265b63;
+  border-radius: 100px;
+  padding: 5px 20px;
+}
+
+.card-hotel {
+  display: flex;
+}
+.card-hotel img {
+  width: 20%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+.card-hotel .information {
+  width: 100%;
+}
+.card-hotel .information .description {
+  margin: 10px 0px;
+  font-size: smaller;
+}
+.card-hotel .information .bag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-hotel .information .bag .hotel .name {
+  font-weight: bolder;
+  font-size: larger;
+}
+.card-hotel .information .bag .hotel .star {
+  color: gold;
+  font-size: smaller;
+}
+.card-hotel .information .bag .city {
+  color: #ff7a07;
+  font-size: smaller;
+  background-color: rgba(255, 122, 7, 0.1019607843);
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+.card-hotel .information .bag .attraction a {
+  background-color: #add8e6;
+  color: #0c4c81;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+  font-size: smaller;
+}
+.card-hotel .information .bag .attraction a i {
+  margin-right: 5px;
+}
+.card-hotel .information .bag .location {
+  color: #265b63;
+  font-size: smaller;
+  background-color: rgba(38, 91, 99, 0.1019607843);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.card-meal {
+  margin-top: 10px;
+}
+.card-meal span {
+  border-radius: 10px;
+  font-size: smaller;
+}
+.card-meal span:not(:last-child)::after {
+  content: ",";
+}/*# sourceMappingURL=style.css.map */

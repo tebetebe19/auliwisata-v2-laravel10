@@ -1,0 +1,533 @@
+$font-kanit: "Kanit", sans-serif;
+$font-lato: "Lato", sans-serif;
+
+#hero,
+#package,
+#gallery,
+#partner,
+#foottop {
+    padding: 100px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: inherit;
+}
+
+button {
+    border-radius: 4px;
+    border-color: transparent;
+    color: white;
+}
+
+.btn-green {
+    background-color: #265b63;
+    padding: 8px 24px;
+    color: white;
+    &:hover {
+        color: white;
+    }
+}
+
+.btn-orange {
+    background-color: #ff7a07;
+    padding: 8px 24px;
+    color: white;
+    &:hover {
+        color: white;
+    }
+}
+
+.section-title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-family: $font-kanit;
+    font-weight: bolder;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+nav {
+    // Keep it commented except u want to use Bootstrap's nav by simple remove the Form
+    z-index: 10;
+    font-family: $font-kanit;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #5b5b5b;
+    .navbar-toggler {
+        border: none;
+        i {
+            color: #5b5b5b;
+        }
+    }
+
+    img {
+        width: 200px;
+    }
+    ul {
+        font-weight: bolder;
+        margin: 0px;
+        list-style-type: none;
+        display: flex;
+        gap: 60px;
+        color: #5b5b5b;
+        .nav-link {
+            padding: 0px !important;
+            color: #5b5b5b;
+        }
+    }
+    @media (max-width: 991px) {
+        ul {
+            gap: 20px;
+            align-items: center;
+        }
+    }
+}
+#hero {
+    background-color: #f7fdff;
+    font-family: $font-kanit;
+    .information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bag {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            h1 {
+                font-size: 64px;
+                span {
+                    color: #ff7a07;
+                }
+            }
+            button {
+                width: 30%;
+            }
+            .point {
+                font-family: $font-lato;
+                display: flex;
+                gap: 16px;
+                color: #5b5b5b;
+                span {
+                    color: #d8d8d8;
+                }
+            }
+        }
+    }
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        border-radius: 24px;
+    }
+}
+
+#package {
+    h1 {
+    }
+    .row > div {
+        margin-bottom: 24px;
+
+        .card {
+            font-family: $font-lato;
+            border-radius: 8px;
+            border-color: transparent;
+            box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+            -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                .card-img {
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        object-fit: cover;
+                        border-radius: 8px !important;
+                        margin-bottom: 8px;
+                    }
+                }
+                .card-title {
+                    font-weight: bolder;
+                }
+                .card-information {
+                    font-size: smaller;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    letter-spacing: 1px;
+                    color: #5b5b5b;
+                    margin-bottom: 8px;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+                .card-allotment {
+                    .progress {
+                        height: 6px;
+                        .progress-bar {
+                            background-color: #265b63;
+                        }
+                    }
+                    p {
+                        font-size: 12px;
+                        margin-top: 5px;
+                        margin-bottom: 0px;
+                    }
+                }
+                hr {
+                    color: #ff7a07;
+                    height: 2px;
+                    width: 25%;
+                    opacity: 100%;
+                    margin: 0px;
+                }
+                .card-price {
+                    font-weight: bolder;
+                    font-size: 20px;
+                    color: #ff7a07;
+                    del {
+                        font-weight: lighter;
+                        font-size: 14px;
+                        color: #535558;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gallery {
+    background-color: #020c11;
+    h1 {
+        color: white;
+    }
+    .images {
+        display: grid;
+        grid-template-rows: masonry;
+        grid-template-areas:
+            "one one one    two two three three four four four"
+            "five five five two two three three four four four"
+            "five five five six six six six     four four four"
+            "five five five six six six six     seven seven seven";
+        // grid-auto-flow: row;
+        gap: 10px;
+        padding: 10px;
+        position: relative;
+        > div {
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .item1 {
+            grid-area: one;
+        }
+        .item2 {
+            grid-area: two;
+        }
+        .item3 {
+            grid-area: three;
+        }
+        .item4 {
+            grid-area: four;
+        }
+        .item5 {
+            grid-area: five;
+        }
+        .item6 {
+            grid-area: six;
+        }
+        .item7 {
+            grid-area: seven;
+        }
+    }
+}
+
+#partner {
+    background-color: #f7fdff;
+    text-align: center;
+    h1 {
+        text-align: left;
+    }
+    hr {
+        color: #ff7a07;
+        height: 2px;
+        width: 25%;
+        opacity: 100%;
+        margin-bottom: 24px;
+    }
+    .col-4 {
+        margin-bottom: 24px;
+        // padding: 20px;
+    }
+    img {
+        width: 80%;
+        mix-blend-mode: multiply;
+    }
+}
+
+footer {
+    background-color: #020c11;
+    color: #fafafa;
+    #foottop {
+        img {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+        .bag {
+            margin-top: 10px;
+            display: flex;
+            input {
+                border: 1px solid #e2e2e233;
+                border-radius: 10px;
+                background-color: transparent;
+                padding: 10px 0px 14px 20px;
+                width: 100%;
+                margin-right: 16px;
+            }
+        }
+        .footline {
+            background-color: #ff7a07;
+            color: white;
+        }
+    }
+    #footline {
+        background-color: #ff7a07;
+        padding: 16px 0px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+
+#detail {
+    .row {
+        > div {
+            margin-bottom: 24px;
+            .hero {
+                object-fit: cover;
+                border-radius: 8px;
+                aspect-ratio: 4/1;
+                width: 100%;
+            }
+            .splide {
+                .splide__slide {
+                    img {
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        object-fit: cover;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accordion {
+    font-family: $font-lato;
+    color: #222222;
+    .accordion-item {
+        box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+        -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+        margin-bottom: 24px;
+        border: none;
+        padding: 16px;
+        border-radius: 8px;
+        .accordion-header {
+            .accordion-button {
+                background-color: white;
+                // border-bottom: 2px solid #efefef;
+                font-weight: bolder;
+                padding: 0px !important;
+                &:not(.collapsed) {
+                    box-shadow: none;
+                    color: #222222;
+                }
+            }
+        }
+        .accordion-body {
+            margin-top: 1rem;
+            padding: 0px;
+            > div {
+                margin-bottom: 40px;
+            }
+            .item-title {
+                font-weight: bolder;
+                hr {
+                    width: 15%;
+                    height: 2px;
+                    margin: 5px 0px;
+                    color: #ff7a07;
+                }
+            }
+        }
+    }
+}
+
+.card-flight {
+    margin-bottom: 10px;
+    .airlines {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        .bag {
+            img {
+                width: 100px;
+                object-fit: cover;
+            }
+        }
+        .airlines-class {
+            color: #5b5b5b;
+            background-color: #ebebeb;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: smaller;
+        }
+    }
+    .schedule {
+        color: #5b5b5b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .flight {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .flight-icon {
+                background-color: #eeeeee;
+                color: #265b63;
+                border-radius: 100%;
+                padding: 10px 8px;
+                margin-right: 10px;
+            }
+            .airport {
+            }
+        }
+        .separator {
+            flex: 1;
+            border: 1px dashed rgb(128, 128, 128);
+            width: 10%;
+        }
+        .duration {
+            width: 150px;
+            font-size: smaller;
+            color: white;
+            text-align: center;
+            background-color: #265b63;
+            border-radius: 100px;
+            padding: 5px 20px;
+        }
+    }
+}
+
+.card-hotel {
+    display: flex;
+    img {
+        width: 20%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 16px;
+    }
+    .information {
+        width: 100%;
+        .description {
+            margin: 10px 0px;
+            font-size: smaller;
+        }
+        .bag {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .hotel {
+                .name {
+                    font-weight: bolder;
+                    font-size: larger;
+                }
+                .star {
+                    color: gold;
+                    font-size: smaller;
+                }
+            }
+
+            .city {
+                color: #ff7a07;
+                font-size: smaller;
+                background-color: #ff7a071a;
+                padding: 8px 16px;
+                border-radius: 30px;
+            }
+
+            .attraction {
+                a {
+                    background-color: #add8e6;
+                    color: #0c4c81;
+                    // color: #5b5b5b;
+                    padding: 5px 10px;
+                    margin-right: 5px;
+                    border-radius: 10px;
+                    // color: #006400;
+                    font-size: smaller;
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .location {
+                color: #265b63;
+                font-size: smaller;
+                background-color: #265b631a;
+                padding: 8px 16px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.card-meal {
+    margin-top: 10px;
+    span {
+        // padding: 5px 20px;
+        border-radius: 10px;
+        // background-color: #add8e6;
+        // color: #0c4c81;
+        font-size: smaller;
+        &:not(:last-child)::after {
+            content: ",";
+        }
+    }
+}
