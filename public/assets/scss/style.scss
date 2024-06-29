@@ -169,6 +169,13 @@ nav {
                     i {
                         margin-right: 5px;
                     }
+                    .hotel {
+                        span {
+                            &:not(:last-child)::after {
+                                content: ",";
+                            }
+                        }
+                    }
                 }
                 .card-allotment {
                     .progress {
@@ -349,185 +356,200 @@ footer {
                     }
                 }
             }
-        }
-    }
-}
+            .card {
+                border-color: transparent;
+                .card-body {
+                    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+                    -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+                    -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+                    border: none;
+                    padding: 16px;
+                    border-radius: 8px;
+                    .title {
+                        font-weight: bolder;
+                        font-size: larger;
+                    }
+                    .card-flight {
+                        .item-title {
+                            font-weight: bolder;
+                            margin-bottom: 10px;
+                            hr {
+                                width: 10%;
+                                height: 2px;
+                                margin: 5px 0px;
+                                color: #ff7a07;
+                            }
+                        }
+                        .airlines {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                            margin-bottom: 10px;
+                            .bag {
+                                img {
+                                    width: 100px;
+                                    object-fit: cover;
+                                }
+                            }
+                            .airlines-class {
+                                color: #5b5b5b;
+                                background-color: #ebebeb;
+                                padding: 4px 12px;
+                                border-radius: 4px;
+                                font-size: smaller;
+                            }
+                        }
+                        .schedule {
+                            color: #5b5b5b;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 10px 0px;
+                            .flight {
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .flight-icon {
+                                    background-color: #eeeeee;
+                                    color: #265b63;
+                                    border-radius: 100%;
+                                    padding: 10px 8px;
+                                    margin-right: 10px;
+                                }
+                                .airport {
+                                }
+                            }
+                            .separator {
+                                flex: 1;
+                                border: 1px dashed rgb(128, 128, 128);
+                                width: 10%;
+                            }
+                            .duration {
+                                width: 150px;
+                                font-size: smaller;
+                                color: white;
+                                text-align: center;
+                                background-color: #265b63;
+                                border-radius: 100px;
+                                padding: 5px 20px;
+                            }
+                        }
+                    }
 
-.accordion {
-    font-family: $font-lato;
-    color: #222222;
-    .accordion-item {
-        box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
-        -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
-        -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
-        margin-bottom: 24px;
-        border: none;
-        padding: 16px;
-        border-radius: 8px;
-        .accordion-header {
-            .accordion-button {
-                background-color: white;
-                // border-bottom: 2px solid #efefef;
-                font-weight: bolder;
-                padding: 0px !important;
-                &:not(.collapsed) {
-                    box-shadow: none;
-                    color: #222222;
-                }
-            }
-        }
-        .accordion-body {
-            margin-top: 1rem;
-            padding: 0px;
-            > div {
-                margin-bottom: 40px;
-            }
-            .item-title {
-                font-weight: bolder;
-                hr {
-                    width: 15%;
-                    height: 2px;
-                    margin: 5px 0px;
-                    color: #ff7a07;
-                }
-            }
-        }
-    }
-}
+                    .card-hotel {
+                        display: flex;
+                        img {
+                            width: 20%;
+                            aspect-ratio: 16/9;
+                            object-fit: cover;
+                            border-radius: 8px;
+                            margin-right: 16px;
+                        }
+                        .information {
+                            width: 100%;
+                            .description {
+                                margin: 10px 0px;
+                                font-size: smaller;
+                            }
+                            .bag {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                .hotel {
+                                    .name {
+                                        font-weight: bolder;
+                                        font-size: larger;
+                                    }
+                                    .star {
+                                        color: gold;
+                                        font-size: smaller;
+                                    }
+                                }
 
-.card-flight {
-    margin-bottom: 10px;
-    .airlines {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 10px;
-        .bag {
-            img {
-                width: 100px;
-                object-fit: cover;
-            }
-        }
-        .airlines-class {
-            color: #5b5b5b;
-            background-color: #ebebeb;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: smaller;
-        }
-    }
-    .schedule {
-        color: #5b5b5b;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .flight {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .flight-icon {
-                background-color: #eeeeee;
-                color: #265b63;
-                border-radius: 100%;
-                padding: 10px 8px;
-                margin-right: 10px;
-            }
-            .airport {
-            }
-        }
-        .separator {
-            flex: 1;
-            border: 1px dashed rgb(128, 128, 128);
-            width: 10%;
-        }
-        .duration {
-            width: 150px;
-            font-size: smaller;
-            color: white;
-            text-align: center;
-            background-color: #265b63;
-            border-radius: 100px;
-            padding: 5px 20px;
-        }
-    }
-}
+                                .city {
+                                    color: #ff7a07;
+                                    font-size: smaller;
+                                    background-color: #ff7a071a;
+                                    padding: 8px 16px;
+                                    border-radius: 30px;
+                                }
 
-.card-hotel {
-    display: flex;
-    img {
-        width: 20%;
-        aspect-ratio: 16/9;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-right: 16px;
-    }
-    .information {
-        width: 100%;
-        .description {
-            margin: 10px 0px;
-            font-size: smaller;
-        }
-        .bag {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .hotel {
-                .name {
-                    font-weight: bolder;
-                    font-size: larger;
-                }
-                .star {
-                    color: gold;
-                    font-size: smaller;
-                }
-            }
+                                .location {
+                                    color: #265b63;
+                                    font-size: smaller;
+                                    background-color: #265b631a;
+                                    padding: 8px 16px;
+                                    border-radius: 8px;
+                                }
+                            }
 
-            .city {
-                color: #ff7a07;
-                font-size: smaller;
-                background-color: #ff7a071a;
-                padding: 8px 16px;
-                border-radius: 30px;
-            }
+                            .attraction {
+                                a {
+                                    display: inline-block;
+                                    background-color: #add8e6;
+                                    color: #0c4c81;
+                                    // color: #5b5b5b;
+                                    padding: 5px 10px;
+                                    // margin-right: 5px;
+                                    margin-bottom: 5px;
+                                    border-radius: 10px;
+                                    // color: #006400;
+                                    font-size: smaller;
 
-            .attraction {
-                a {
-                    background-color: #add8e6;
-                    color: #0c4c81;
-                    // color: #5b5b5b;
-                    padding: 5px 10px;
-                    margin-right: 5px;
-                    border-radius: 10px;
-                    // color: #006400;
-                    font-size: smaller;
-
-                    i {
-                        margin-right: 5px;
+                                    i {
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
-            .location {
-                color: #265b63;
-                font-size: smaller;
-                background-color: #265b631a;
-                padding: 8px 16px;
-                border-radius: 8px;
-            }
-        }
-    }
-}
+            .accordion {
+                font-family: $font-lato;
+                color: #222222;
+                .accordion-item {
+                    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+                    -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+                    -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+                    margin-bottom: 24px;
+                    border: none;
+                    padding: 16px;
+                    border-radius: 8px;
+                    .accordion-header {
+                        .accordion-button {
+                            background-color: white;
+                            // border-bottom: 2px solid #efefef;
+                            font-weight: bolder;
+                            padding: 0px !important;
+                            &:not(.collapsed) {
+                                box-shadow: none;
+                                color: #222222;
+                            }
+                        }
+                    }
+                    .accordion-body {
+                        margin-top: 1rem;
+                        padding: 0px;
 
-.card-meal {
-    margin-top: 10px;
-    span {
-        // padding: 5px 20px;
-        border-radius: 10px;
-        // background-color: #add8e6;
-        // color: #0c4c81;
-        font-size: smaller;
-        &:not(:last-child)::after {
-            content: ",";
+                        .card-meal {
+                            margin-top: 10px;
+                            span {
+                                padding: 5px 20px;
+                                border-radius: 10px;
+                                background-color: #add8e6;
+                                color: #0c4c81;
+                                font-size: smaller;
+                                // &:not(:last-child)::after {
+                                //     content: ",";
+                                // }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

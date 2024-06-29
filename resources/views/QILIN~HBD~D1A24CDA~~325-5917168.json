@@ -1,0 +1,155 @@
+{
+    "result": {
+        "time": {
+            "request": 1716251134728,
+            "response": 1716251152194,
+            "process": 17466,
+            "unit": "Milisecond"
+        },
+        "status": "OK"
+    },
+    "hotelBookingResponses": [
+        {
+            "agentCode": "GOLDENRAMA",
+            "bookingID": "QILIN~HBD~D1A24CDA~~325-5917168",
+            "supplierInformation": {
+                "supplierCode": "HBD",
+                "typeOfRate": "AG",
+                "creationDate": "2024-05-21",
+                "creationUser": "rpzsqdpmynuavgr9399793kr",
+                "currencyCode": "IDR",
+                "pendingAmount": 3695047,
+                "invoiceCompany": {
+                    "code": "SG1",
+                    "company": "HOTELBEDS PTE. LTD",
+                    "registrationNumber": "M2-0084578-1"
+                },
+                "modificationPolicies": {
+                    "cancellation": true,
+                    "modification": false
+                },
+                "supplierTripId": null,
+                "supplierUpstreamVoucherCode": null,
+                "supplierUpstreamRef": null,
+                "supplierUpstreamConfirmationCode": "SH20422403",
+                "supplierConfirmationCode": "325-5917168"
+            },
+            "vendorInformation": {
+                "vendorCode": "QILIN",
+                "locatorCode": "D1A24CDA",
+                "toSupplierRef": "D1A24CDADBS",
+                "fromClientRef": "dbs",
+                "bookedAt": "2024-05-21T00:25:51+00:00",
+                "voucheredAt": null,
+                "cancelledAt": null,
+                "bookingStatus": "CONFIRMED",
+                "voucherStatus": null,
+                "cancelStatus": null
+            },
+            "hotelInformation": {
+                "id": "223244",
+                "name": "Swiss-Belhotel Balikpapan",
+                "address": "Balikpapan Ocean Square, Jenderal Sudirman Street",
+                "description": "Located in Balikpapan City Centre's shopping and leisure district, this hotel is ideally positioned for exploring all that it has to offer and at the same time enjoying the amazing Kemala Beach. The beach is reachable within a 10-minute drive, the same will take guests to Sepinggan International Airport. There is a shuttle service for those who want some extra comfort for the short journey. Business travellers will also have the convenience of a modern business centre and complimentary WiFi access throughout the venue. There is also a pharmacy located on the premises, so those who are feeling a little down can get something to help them power through. For dining guests can either explore the surroundings or trust the excellent onsite restaurant and its delicious international and local dishes for not simply filling the belly, but also satisfying the culinary buds.",
+                "star": 4,
+                "checkInDate": "2024-05-27",
+                "checkInInfo": "Check-in hour 14:00 - 00:00",
+                "checkOutDate": "2024-05-31",
+                "checkOutInfo": "Check-out hour (Time From: 12:00:00 Until: 13:00:00)",
+                "countryCode": "ID",
+                "countryName": "Indonesia",
+                "destinationName": "Balikpapan, Balikpapan",
+                "longitude": 116.8408794,
+                "latitude": -1.278343755,
+                "pictureUrl": "https:\/\/photos.hotelbeds.com\/giata\/22\/223244\/223244a_hb_a_001.jpg",
+                "norms": [
+                    "Children share the bed with parents 1. Car park YES (without additional debit notes)",
+                    "Check-in hour 14:00 - 00:00",
+                    "From date 5\/27\/2024 12:00:00 AM to 5\/31\/2024 12:00:00 AM: Rate Notes: Hotel Tariff Notes:\nNo show and early departure will be subjected to 100% charge. No date, name and room change allowed. Rates are based on existing bedding only. Bookings including children will be based on sharing parents bedding, no separate bed for children is provided unless otherwise stated."
+                ]
+            },
+            "hotelRoomInformation": [
+                {
+                    "roomIndex": 1,
+                    "roomID": "2024-05-27+4+1+ID+1+0+0++HBD.D.ZONE.ID-BPN-1+false\/223244\/4028047.00\/",
+                    "roomName": "DOUBLE DELUXE QUEEN BED",
+                    "roomBoardInclusion": "BED AND BREAKFAST",
+                    "roomSupplementList": [],
+                    "roomPrice": {
+                        "currencyCode": "IDR",
+                        "totalPrice": 4028047,
+                        "supplierNTA": 3695047,
+                        "agentServiceFee": 300000,
+                        "agentServiceFeePPN": 33000,
+                        "agentSellingFare": 4028047
+                    },
+                    "roomNote": "Children share the bed with parents 1. Car park YES (without additional debit notes). Check-in hour 14:00 - 00:00. From date 5\/27\/2024 12:00:00 AM to 5\/31\/2024 12:00:00 AM: Rate Notes: Hotel Tariff Notes:\nNo show and early departure will be subjected to 100% charge. No date, name and room change allowed. Rates are based on existing bedding only. Bookings including children will be based on sharing parents bedding, no separate bed for children is provided unless otherwise stated.",
+                    "numberOfRooms": 1,
+                    "numberOfAdults": 1,
+                    "numberOfChildrens": 0,
+                    "numberOfInfants": 0,
+                    "roomCancellationPolicyList": {
+                        "isCancellable": true,
+                        "lastCancellationDeadline": "2024-05-25T14:59:59+00:00",
+                        "textualPolicyList": [],
+                        "noShowCharges": [],
+                        "defaultPolicy": null,
+                        "autoCancellationText": null,
+                        "roomCancellationCharges": [
+                            {
+                                "fromDate": "2024-05-20T16:00:00+00:00",
+                                "toDate": "2024-05-25T14:58:59+00:00",
+                                "chargeType": "Amount",
+                                "currencyCode": "IDR",
+                                "chargeAmount": 0
+                            },
+                            {
+                                "fromDate": "2024-05-25T14:59:59+00:00",
+                                "toDate": "2024-05-25T04:58:59+00:00",
+                                "chargeType": "Amount",
+                                "currencyCode": "IDR",
+                                "chargeAmount": 4028047
+                            },
+                            {
+                                "fromDate": "2024-05-25T04:59:59+00:00",
+                                "toDate": "2024-05-26T15:59:00+00:00",
+                                "chargeType": "Amount",
+                                "currencyCode": "IDR",
+                                "chargeAmount": 1606384
+                            }
+                        ]
+                    }
+                }
+            ],
+            "hotelRoomGuestData": {
+                "roomHolder": {
+                    "firstName": "YOSEF TRISNAND G",
+                    "lastName": "TIWOW"
+                },
+                "roomGuestList": [
+                    {
+                        "roomNumber": 1,
+                        "type": "ADT",
+                        "title": null,
+                        "firstName": "YOSEF TRISNAND G",
+                        "lastName": "TIWOW"
+                    }
+                ]
+            },
+            "roomCombinationType": "FreeRoomCombination",
+            "roomIndexCombinationList": [
+                {
+                    "roomNumber": 1,
+                    "roomGroup": 1,
+                    "numberOfRooms": 1,
+                    "roomIndexSequence": [
+                        1
+                    ]
+                }
+            ],
+            "remarkList": [
+                "DOUBLE DELUXE QUEEN BED-BED AND BREAKFAST"
+            ]
+        }
+    ]
+}

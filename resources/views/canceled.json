@@ -1,0 +1,146 @@
+{
+    "result": {
+        "time": {
+            "request": 1719541677542,
+            "response": 1719541681824,
+            "process": 4282,
+            "unit": "Milisecond"
+        },
+        "status": "OK"
+    },
+    "pnrs": [
+        {
+            "supplairCode": "PGS",
+            "agentCode": "GOLDENRAMA",
+            "info": {
+                "contactInfo": {
+                    "email": "puspidasiahaan@dbs.com",
+                    "firstName": "PUSPIDA A S",
+                    "title": "MRS",
+                    "lastName": "SIAHAAN",
+                    "phoneNumber": "0818686939"
+                },
+                "paxs": [
+                    {
+                        "paxType": "ADT",
+                        "paxID": "PAX1",
+                        "nationality": "ID",
+                        "firstName": "PUSPIDA A S",
+                        "title": "MRS",
+                        "dob": "1979-09-19",
+                        "lastName": "SIAHAAN",
+                        "identityNumber": "3276065909790007"
+                    }
+                ],
+                "journeys": [
+                    {
+                        "journeyID": "QG910~CGK~KNO",
+                        "originCode": "CGK",
+                        "destinationCode": "KNO",
+                        "segmentIDS": [
+                            "QG~910~~CGK~KNO~2024-07-04T05:50~2024-07-04T08:10"
+                        ]
+                    }
+                ],
+                "segments": [
+                    {
+                        "segmentID": "QG~910~~CGK~KNO~2024-07-04T05:50~2024-07-04T08:10",
+                        "operatingCarrierInfo": {
+                            "carrierCode": "QG",
+                            "flightNumber": "910",
+                            "opSuffix": ""
+                        },
+                        "marketingCarrierInfo": {
+                            "carrierCode": "QG",
+                            "flightNumber": "910"
+                        },
+                        "originCode": "CGK",
+                        "destinationCode": "KNO",
+                        "departureDateTime": "2024-07-04T05:50",
+                        "arrivalDateTime": "2024-07-04T08:10"
+                    }
+                ]
+            },
+            "bookingSummary": {
+                "agentIssuedFee": 188700,
+                "totalFare": 1700969,
+                "totalPrepaidBaggage": 0,
+                "totalBaseFare": 1223000,
+                "agentSellingFare": 1889669,
+                "totalNTA": 1676509,
+                "agentServiceFee": 170000,
+                "agentServiceFeePPN": 18700,
+                "totalTax": 477969
+            },
+            "bookingTimeLimit": "2024-06-28T07:27",
+            "bookingDateTime": "2024-06-28T02:27",
+            "scheduleFareDetail": [
+                {
+                    "journeyIDS": [
+                        "QG910~CGK~KNO"
+                    ],
+                    "segmentIDS": [
+                        "QG~910~~CGK~KNO~2024-07-04T05:50~2024-07-04T08:10"
+                    ],
+                    "fareDetails": [
+                        {
+                            "paxType": "ADT",
+                            "price": {
+                                "baseFare": 1223000,
+                                "taxs": [
+                                    {
+                                        "taxCode": "IWJR",
+                                        "taxFare": 5000
+                                    },
+                                    {
+                                        "taxCode": "PSC",
+                                        "taxFare": 168720
+                                    },
+                                    {
+                                        "taxCode": "SC",
+                                        "taxFare": 152900
+                                    },
+                                    {
+                                        "taxCode": "VS",
+                                        "taxFare": 16819
+                                    },
+                                    {
+                                        "taxCode": "VAT",
+                                        "taxFare": 134530
+                                    }
+                                ],
+                                "totalTax": 477969,
+                                "totalPublishFare": 1700969,
+                                "agentServiceFee": 170000,
+                                "agentServiceFeePPN": 18700,
+                                "agentIssuedFee": 188700,
+                                "agentSellingFare": 1889669
+                            },
+                            "fareComponent": [
+                                {
+                                    "fareCode": "E\/E",
+                                    "fareBasisCode": "E\/E",
+                                    "segmentID": "QG~910~~CGK~KNO~2024-07-04T05:50~2024-07-04T08:10"
+                                }
+                            ],
+                            "paxRefID": "PAX1"
+                        }
+                    ],
+                    "fareSummary": {
+                        "totalBaseFare": 1223000,
+                        "totalTax": 477969,
+                        "totalPrepaidBaggage": 0,
+                        "totalFare": 1700969,
+                        "agentServiceFee": 170000,
+                        "agentServiceFeePPN": 18700,
+                        "agentIssuedFee": 188700,
+                        "agentSellingFare": 1889669
+                    }
+                }
+            ],
+            "bookingID": "CLN~GY4U7V~1420588",
+            "bookingStatus": "CANCELLED",
+            "bookingCode": "GY4U7V"
+        }
+    ]
+}

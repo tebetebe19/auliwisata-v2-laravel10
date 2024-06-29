@@ -35,19 +35,18 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-img">
-                                    {{-- <img src="{{ $item['thumbnail'] }}"> --}}
                                     <div id="{{ $item['slug'] }}" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img src="{{ $item['thumbnail'] }}">
                                             </div>
-                                            @foreach ($item['gallery'] as $gal)
+                                            {{-- @foreach ($item['gallery'] as $gal)
                                                 <div class="carousel-item">
                                                     <img src="{{ $gal }}">
                                                 </div>
-                                            @endforeach
+                                            @endforeach --}}
                                         </div>
-                                        <button class="carousel-control-prev" type="button"
+                                        {{-- <button class="carousel-control-prev" type="button"
                                             data-bs-target="#{{ $item['slug'] }}" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Previous</span>
@@ -56,33 +55,40 @@
                                             data-bs-target="#{{ $item['slug'] }}" data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Next</span>
-                                        </button>
+                                        </button> --}}
                                     </div>
                                 </div>
                                 <h5 class="card-title">{{ $item['name'] }}</h5>
                                 <div class="card-information">
                                     <div class="duration">
-                                        <i class="fas fa-clock"></i> {{ $item['duration'] }} Hari
-                                        {{ $item['duration_night'] }} Malam
+                                        <i class="fas fa-clock"></i> {{ count($item['itinerary']) }} Hari
+                                        {{ count($item['itinerary']) - 1 }} Malam
                                     </div>
                                     <div class="airlines">
-                                        <i class="fas fa-plane-departure"></i> {{ $item['airlines_name'] }}
+                                        <i class="fas fa-plane-departure"></i> {{ $item['airlines']['airlinesName'] }}
                                     </div>
                                     <div class="hotel">
-                                        <i class="fas fa-hotel"></i>{{ $item['hotel_name'][0] }}
+                                        <i class="fas fa-hotel"></i>
+                                        @foreach ($item['hotel'] as $ht)
+                                            <span>{{ $ht['name'] }}</span>
+                                        @endforeach
                                     </div>
+
                                 </div>
-                                <div class="card-allotment">
+                                {{-- <div class="card-allotment">
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar"
                                             style="width: {{ $item['seat_percentage'] >= 100 ? '100' : $item['seat_percentage'] }}%">
                                         </div>
                                     </div>
                                     {!! $item['seat_left'] <= 0 ? '<p>PENUH</p>' : '<p>Sisa ' . $item['seat_left'] . '</p>' !!}
-                                </div>
+                                </div> --}}
                                 <hr>
                                 <div class="card-price">
-                                    Rp {{ $item['price_normal'] }} {!! $item['price_discount'] == 0 ? '' : '<del>Rp ' . $item['price_discount'] . '</del>' !!}
+                                    Rp {{ number_format($item['price']['priceNormal'], 0, ',', '.') }}
+                                    {!! number_format($item['price']['priceDiscount'], 0, ',', '.') == 0
+                                        ? ''
+                                        : '<del>Rp ' . number_format($item['price']['priceDiscount'], 0, ',', '.') . '</del>' !!}
 
                                 </div>
                             </div>

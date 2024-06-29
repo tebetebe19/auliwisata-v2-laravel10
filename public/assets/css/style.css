@@ -165,6 +165,9 @@ nav ul .nav-link {
 #package .row > div .card .card-body .card-information i {
   margin-right: 5px;
 }
+#package .row > div .card .card-body .card-information .hotel span:not(:last-child)::after {
+  content: ",";
+}
 #package .row > div .card .card-body .card-allotment .progress {
   height: 6px;
 }
@@ -323,91 +326,74 @@ footer #footline .icons {
   object-fit: cover;
   border-radius: 8px;
 }
-
-.accordion {
-  font-family: "Lato", sans-serif;
-  color: #222222;
+#detail .row > div .card {
+  border-color: transparent;
 }
-.accordion .accordion-item {
+#detail .row > div .card .card-body {
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
-  margin-bottom: 24px;
   border: none;
   padding: 16px;
   border-radius: 8px;
 }
-.accordion .accordion-item .accordion-header .accordion-button {
-  background-color: white;
+#detail .row > div .card .card-body .title {
   font-weight: bolder;
-  padding: 0px !important;
+  font-size: larger;
 }
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  box-shadow: none;
-  color: #222222;
-}
-.accordion .accordion-item .accordion-body {
-  margin-top: 1rem;
-  padding: 0px;
-}
-.accordion .accordion-item .accordion-body > div {
-  margin-bottom: 40px;
-}
-.accordion .accordion-item .accordion-body .item-title {
+#detail .row > div .card .card-body .card-flight .item-title {
   font-weight: bolder;
+  margin-bottom: 10px;
 }
-.accordion .accordion-item .accordion-body .item-title hr {
-  width: 15%;
+#detail .row > div .card .card-body .card-flight .item-title hr {
+  width: 10%;
   height: 2px;
   margin: 5px 0px;
   color: #ff7a07;
 }
-
-.card-flight {
-  margin-bottom: 10px;
-}
-.card-flight .airlines {
+#detail .row > div .card .card-body .card-flight .airlines {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 10px;
 }
-.card-flight .airlines .bag img {
+#detail .row > div .card .card-body .card-flight .airlines .bag img {
   width: 100px;
   object-fit: cover;
 }
-.card-flight .airlines .airlines-class {
+#detail .row > div .card .card-body .card-flight .airlines .airlines-class {
   color: #5b5b5b;
   background-color: #ebebeb;
   padding: 4px 12px;
   border-radius: 4px;
   font-size: smaller;
 }
-.card-flight .schedule {
+#detail .row > div .card .card-body .card-flight .schedule {
   color: #5b5b5b;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px 0px;
 }
-.card-flight .schedule .flight {
+#detail .row > div .card .card-body .card-flight .schedule .flight {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card-flight .schedule .flight .flight-icon {
+#detail .row > div .card .card-body .card-flight .schedule .flight .flight-icon {
   background-color: #eeeeee;
   color: #265b63;
   border-radius: 100%;
   padding: 10px 8px;
   margin-right: 10px;
 }
-.card-flight .schedule .separator {
+#detail .row > div .card .card-body .card-flight .schedule .separator {
   flex: 1;
   border: 1px dashed rgb(128, 128, 128);
   width: 10%;
 }
-.card-flight .schedule .duration {
+#detail .row > div .card .card-body .card-flight .schedule .duration {
   width: 150px;
   font-size: smaller;
   color: white;
@@ -416,70 +402,96 @@ footer #footline .icons {
   border-radius: 100px;
   padding: 5px 20px;
 }
-
-.card-hotel {
+#detail .row > div .card .card-body .card-hotel {
   display: flex;
 }
-.card-hotel img {
+#detail .row > div .card .card-body .card-hotel img {
   width: 20%;
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 8px;
   margin-right: 16px;
 }
-.card-hotel .information {
+#detail .row > div .card .card-body .card-hotel .information {
   width: 100%;
 }
-.card-hotel .information .description {
+#detail .row > div .card .card-body .card-hotel .information .description {
   margin: 10px 0px;
   font-size: smaller;
 }
-.card-hotel .information .bag {
+#detail .row > div .card .card-body .card-hotel .information .bag {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
-.card-hotel .information .bag .hotel .name {
+#detail .row > div .card .card-body .card-hotel .information .bag .hotel .name {
   font-weight: bolder;
   font-size: larger;
 }
-.card-hotel .information .bag .hotel .star {
+#detail .row > div .card .card-body .card-hotel .information .bag .hotel .star {
   color: gold;
   font-size: smaller;
 }
-.card-hotel .information .bag .city {
+#detail .row > div .card .card-body .card-hotel .information .bag .city {
   color: #ff7a07;
   font-size: smaller;
   background-color: rgba(255, 122, 7, 0.1019607843);
   padding: 8px 16px;
   border-radius: 30px;
 }
-.card-hotel .information .bag .attraction a {
-  background-color: #add8e6;
-  color: #0c4c81;
-  padding: 5px 10px;
-  margin-right: 5px;
-  border-radius: 10px;
-  font-size: smaller;
-}
-.card-hotel .information .bag .attraction a i {
-  margin-right: 5px;
-}
-.card-hotel .information .bag .location {
+#detail .row > div .card .card-body .card-hotel .information .bag .location {
   color: #265b63;
   font-size: smaller;
   background-color: rgba(38, 91, 99, 0.1019607843);
   padding: 8px 16px;
   border-radius: 8px;
 }
-
-.card-meal {
-  margin-top: 10px;
-}
-.card-meal span {
+#detail .row > div .card .card-body .card-hotel .information .attraction a {
+  display: inline-block;
+  background-color: #add8e6;
+  color: #0c4c81;
+  padding: 5px 10px;
+  margin-bottom: 5px;
   border-radius: 10px;
   font-size: smaller;
 }
-.card-meal span:not(:last-child)::after {
-  content: ",";
+#detail .row > div .card .card-body .card-hotel .information .attraction a i {
+  margin-right: 5px;
+}
+#detail .row > div .accordion {
+  font-family: "Lato", sans-serif;
+  color: #222222;
+}
+#detail .row > div .accordion .accordion-item {
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+}
+#detail .row > div .accordion .accordion-item .accordion-header .accordion-button {
+  background-color: white;
+  font-weight: bolder;
+  padding: 0px !important;
+}
+#detail .row > div .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: #222222;
+}
+#detail .row > div .accordion .accordion-item .accordion-body {
+  margin-top: 1rem;
+  padding: 0px;
+}
+#detail .row > div .accordion .accordion-item .accordion-body .card-meal {
+  margin-top: 10px;
+}
+#detail .row > div .accordion .accordion-item .accordion-body .card-meal span {
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: #add8e6;
+  color: #0c4c81;
+  font-size: smaller;
 }/*# sourceMappingURL=style.css.map */
