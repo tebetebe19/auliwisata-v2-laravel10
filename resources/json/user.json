@@ -1,0 +1,28 @@
+[
+    {
+        "item_owner": {
+            "owner_name": "Name of the owner",
+            "owner_pp": "htts://assets",
+            "owner_profile_url": "https://link to profile",
+            "owner_location": {
+                "province_name": "DKI Jakarta",
+                "city_name": "Jakarta Selatan",
+                "url": "Combination of long lat to create url"
+            },
+            "owner_soc": [
+                {
+                    "soc_icon": "https://assets",
+                    "soc_name": "Instagram",
+                    "soc_prelink": "https://instagram.com/",
+                    "soc_name": "@tebe19_"
+                },
+                {
+                    "soc_icon": "https://assets",
+                    "soc_name": "Instagram",
+                    "soc_prelink": "https://instagram.com/",
+                    "soc_name": "@tebe19_"
+                }
+            ]
+        }
+    }
+]

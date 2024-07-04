@@ -1,0 +1,13 @@
+[
+    {
+        "item_code": "IT-RandomDigit",
+        "item_type": "WTS/WTB",
+        "item_thumbnail": "https://assets",
+        "item_condition": "New/Second",
+        "item_name": "Name of the item",
+        "item_slug": "slug-of-the-item",
+        "item_price": "20000000",
+        "is_boosted": true,
+        "is_verified": true
+    }
+]

@@ -186,7 +186,6 @@ class ProductsController extends Controller
                 'price' => $products['price'],
             ];
         }, $products);
-
         // return response($products);
         // Mapping produts with hotels end
 

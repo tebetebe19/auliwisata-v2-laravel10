@@ -2,7 +2,7 @@
     <div class="container">
         <div id="foottop">
             <div class="row">
-                <div class="col-5">
+                <div class="col-lg-5">
                     <img src="assets/img/logo.png" alt="">
                     <p>Kantor Pusat</p>
                     <p>
@@ -11,7 +11,7 @@
                         Jakarta Pusat 10510, Telp. 021 421 2938.
                     </p>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2">
                     <ul>
                         <li>
                             <a href="">About Us</a>
@@ -24,7 +24,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-5">
+                <div class="col-lg-5">
                     <label for="">Get a newsletter</label> <br>
                     <div class="bag">
                         <input type="text" placeholder="Your email">

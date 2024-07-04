@@ -1,6 +1,10 @@
 $font-kanit: "Kanit", sans-serif;
 $font-lato: "Lato", sans-serif;
 
+// * {
+//     border: 1px solid black;
+// }
+
 #hero,
 #package,
 #gallery,
@@ -123,9 +127,56 @@ nav {
     }
     img {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         object-fit: cover;
         border-radius: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .phone-hide {
+        visibility: hidden !important;
+    }
+    #hero,
+    #package,
+    #gallery,
+    #partner,
+    #foottop {
+        padding: 50px 0px;
+    }
+    #hero {
+        background-color: #f7fdff;
+        font-family: $font-kanit;
+        .information {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .bag {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                text-align: center;
+                h1 {
+                    font-size: 64px;
+                    span {
+                        color: #ff7a07;
+                    }
+                }
+                button {
+                    width: 100%;
+                }
+                .point {
+                    font-family: $font-lato;
+                    display: flex;
+                    gap: 16px;
+                    color: #5b5b5b;
+                    span {
+                        color: #d8d8d8;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -336,6 +387,60 @@ footer {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    footer {
+        background-color: #020c11;
+        color: #fafafa;
+        #foottop {
+            img {
+                width: 30%;
+                margin-bottom: 30px;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+            .bag {
+                margin-top: 10px;
+                display: flex;
+                input {
+                    border: 1px solid #e2e2e233;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    padding: 10px 0px 14px 20px;
+                    width: 100%;
+                    margin-right: 16px;
+                }
+            }
+            .footline {
+                background-color: #ff7a07;
+                color: white;
+            }
+        }
+        #footline {
+            background-color: #ff7a07;
+            padding: 16px 0px;
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .icons {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+}
+
 #detail {
     .row {
         > div {
@@ -424,15 +529,55 @@ footer {
                                 flex: 1;
                                 border: 1px dashed rgb(128, 128, 128);
                                 width: 10%;
-                            }
-                            .duration {
-                                width: 150px;
-                                font-size: smaller;
+                                height: 1px;
                                 color: white;
-                                text-align: center;
-                                background-color: #265b63;
-                                border-radius: 100px;
-                                padding: 5px 20px;
+                            }
+                        }
+                    }
+                    @media only screen and (max-width: 768px) {
+                        .card-flight {
+                            .airlines {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                margin-bottom: 10px;
+                                .bag {
+                                    img {
+                                        width: 50px;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                            .schedule {
+                                color: #5b5b5b;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin: 10px 0px;
+                                .flight {
+                                    flex: 1;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 10px;
+                                    .flight-icon {
+                                        background-color: #eeeeee;
+                                        color: #265b63;
+                                        border-radius: 100%;
+                                        padding: 10px 8px;
+                                        margin-right: 10px;
+                                    }
+                                    .airport {
+                                    }
+                                }
+                                .separator {
+                                    flex: 1;
+                                    border: 1px dashed rgb(128, 128, 128);
+                                    height: 100px;
+                                    width: 1px;
+                                    color: white;
+                                }
                             }
                         }
                     }
@@ -505,6 +650,75 @@ footer {
                             }
                         }
                     }
+                    @media only screen and (max-width: 768px) {
+                        .card-hotel {
+                            display: flex;
+                            flex-direction: column;
+                            img {
+                                width: 100%;
+                                height: 200px;
+                                margin-bottom: 10px;
+                            }
+                            .information {
+                                width: 100%;
+                                .description {
+                                    margin: 10px 0px;
+                                    font-size: smaller;
+                                }
+                                .bag {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 10px;
+                                    .hotel {
+                                        .name {
+                                            font-weight: bolder;
+                                            font-size: larger;
+                                        }
+                                        .star {
+                                            color: gold;
+                                            font-size: smaller;
+                                        }
+                                    }
+
+                                    .city {
+                                        color: #ff7a07;
+                                        font-size: smaller;
+                                        background-color: #ff7a071a;
+                                        padding: 8px 16px;
+                                        border-radius: 30px;
+                                    }
+
+                                    .location {
+                                        color: #265b63;
+                                        font-size: smaller;
+                                        background-color: #265b631a;
+                                        padding: 8px 16px;
+                                        border-radius: 8px;
+                                    }
+                                }
+
+                                .attraction {
+                                    a {
+                                        display: inline-block;
+                                        background-color: #add8e6;
+                                        color: #0c4c81;
+                                        // color: #5b5b5b;
+                                        padding: 5px 10px;
+                                        // margin-right: 5px;
+                                        margin-bottom: 5px;
+                                        border-radius: 10px;
+                                        // color: #006400;
+                                        font-size: smaller;
+
+                                        i {
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .accordion {
@@ -537,14 +751,13 @@ footer {
                         .card-meal {
                             margin-top: 10px;
                             span {
-                                padding: 5px 20px;
+                                padding: 5px 10px;
                                 border-radius: 10px;
                                 background-color: #add8e6;
                                 color: #0c4c81;
                                 font-size: smaller;
-                                // &:not(:last-child)::after {
-                                //     content: ",";
-                                // }
+                                display: inline-block;
+                                margin-bottom: 5px;
                             }
                         }
                     }

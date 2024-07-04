@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                     @if (!$loop->last)
-                                        <div class="separator"></div>
+                                        <div class="separator">.</div>
                                     @endif
                                 @endforeach
                             </div>
@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
                                     @if (!$loop->last)
-                                        <div class="separator"></div>
+                                        <div class="separator">.</div>
                                     @endif
                                 @endforeach
                             </div>

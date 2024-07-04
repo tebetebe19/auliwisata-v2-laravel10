@@ -1,0 +1,27 @@
+[
+    {
+        "ib_code": "IB-Random",
+        "ib_thumbnail": "https://assets",
+        "ib_name": "Name of the IceBox",
+        "ib_price_coupon": 10000,
+        "ib_price_now": 20000,
+        "ib_participant_limit": 50,
+        "ib_participants": 2,
+        "ib_exp_date": "ddmmyyy",
+        "ib_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, adipisci.",
+        "participants": [
+            {
+                "owner_name": "Name of the owner",
+                "owner_pp": "htts://assets",
+                "owner_profile_url": "https://link to profile",
+                "join_date": "ddmmyyy"
+            },
+            {
+                "owner_name": "Name of the owner",
+                "owner_pp": "htts://assets",
+                "owner_profile_url": "https://link to profile",
+                "join_date": "ddmmyyy"
+            }
+        ]
+    }
+]

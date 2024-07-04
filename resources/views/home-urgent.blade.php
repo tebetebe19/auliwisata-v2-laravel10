@@ -4,7 +4,7 @@
     <section id="hero">
         <div class="container">
             <div class="row">
-                <div class="col information">
+                <div class="col-lg-6 information">
                     <div class="bag">
                         <h1>
                             Happily traveling without forget about <span>aqidah</span>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-lg-6">
                     <img src="assets/img/hero.jpeg" alt="">
                 </div>
             </div>
