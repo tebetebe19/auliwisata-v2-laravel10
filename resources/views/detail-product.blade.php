@@ -154,7 +154,8 @@
                             <div id="{{ $itin['id'] }}" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionItin">
                                 <div class="accordion-body">
-                                    {{-- <div class="splide" role="group" aria-label="" style="margin-bottom: 16px">
+                                    <div class="splide-section splide" role="group" aria-label=""
+                                        style="margin-bottom: 16px">
                                         <div class="splide__track">
                                             <ul class="splide__list">
                                                 @foreach ($itin['gallery'] as $gal)
@@ -163,7 +164,7 @@
                                                 @endforeach
                                             </ul>
                                         </div>
-                                    </div> --}}
+                                    </div>
                                     <div class="description">
                                         <div class="card-description">
                                             {{ $itin['description'] }}
@@ -186,7 +187,7 @@
 
 @section('js')
     <!-- Splide JS -->
-    <script>
+    {{-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             var splide = new Splide('.splide', {
                 type: 'loop',
@@ -200,6 +201,40 @@
                 gap: 20,
             });
             splide.mount(window.splide.Extensions);
+        });
+    </script> --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all sections with the class 'splide-section'
+            var splideSections = document.querySelectorAll('.splide-section');
+
+            // Configuration options for Splide
+            var splideConfig = {
+                type: 'loop',
+                drag: 'free',
+                focus: 'center',
+                autoHeight: true,
+                arrows: false,
+                pagination: false,
+                gap: 20,
+                autoplay: true,
+                interval: 1000,
+                // pauseOnHover: true,
+                perPage: 4,
+                breakpoints: {
+                    768: {
+                        perPage: 1,
+                    },
+                    992: {
+                        perPage: 2,
+                    },
+                }
+            };
+
+            // Initialize Splide for each section
+            splideSections.forEach(function(section) {
+                new Splide(section, splideConfig).mount();
+            });
         });
     </script>
 @endsection

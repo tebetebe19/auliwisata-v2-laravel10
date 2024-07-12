@@ -5,6 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Paket Umroh Terbaik Di Indonesia">
+    <meta name="keywords" content="@yield('keywords')">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -36,6 +38,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
     <title>Auli Wisata</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/tab.png">
 </head>
 
 <body>

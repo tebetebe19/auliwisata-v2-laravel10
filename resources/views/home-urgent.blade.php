@@ -1,5 +1,7 @@
 @extends('layout.main')
 
+
+
 @section('content')
     <section id="hero">
         <div class="container">
