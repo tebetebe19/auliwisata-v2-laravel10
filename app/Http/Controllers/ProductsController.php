@@ -13,6 +13,36 @@ class ProductsController extends Controller
         $tableIDproducts = env('AIRTABLE_TABLE_ID_PRODUCTS');
         $tableIDhotels = env('AIRTABLE_TABLE_ID_HOTELS');
         $tableIDitineraries = env('AIRTABLE_TABLE_ID_ITINERARIES');
+        $tableIDgalleries = env('AIRTABLE_TABLE_ID_GALLERIES');
+
+        // Fetch Gallery Start
+        $responseGalleries = Http::withHeaders(['Authorization' => 'Bearer '.$apiKey])
+            ->get('https://api.airtable.com/v0/'.$baseId.'/'.$tableIDgalleries);
+        $galleries = json_decode($responseGalleries, true)['records'];
+
+        // return response($galleries);
+        // Fetch Gallery End
+
+        // Restructure gallery start
+        foreach ($galleries as $gallery) {
+            // Transform images start
+            $simpleImages = [];
+            foreach ($gallery['fields']['images'] as $img) {
+                $simpleImages[] = $img['url'];
+            }
+            // Transform images end
+            $transGallery = [
+                'id' => $gallery['id'],
+                'name' => $gallery['fields']['name'],
+                'thumbnail' => $gallery['fields']['thumbnail'][0]['url'],
+                'images' => $simpleImages,
+            ];
+            $simpleGallery[] = $transGallery;
+        }
+        $galleries = $simpleGallery;
+
+        // return response($galleries);
+        // Restructure gallery end
 
         // Fetch Product Start
         $filterFormula = 'AND(SEARCH("'.$slug.'", {slug}), {hide} = FALSE())';
@@ -210,12 +240,12 @@ class ProductsController extends Controller
         $international = collect($products)->where('type', 'international');
         $keywords = implode(',', array_column($products, 'slug'));
 
-        // return response($keywords);
+        // return response($galleries);
 
         if ($slug != null) {
             return view('detail-product', compact('products'));
         } else {
-            return view('home', compact('products', 'umroh', 'international', 'keywords'));
+            return view('home', compact('galleries', 'products', 'umroh', 'international', 'keywords'));
         }
     }
 }

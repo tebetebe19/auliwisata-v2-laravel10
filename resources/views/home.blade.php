@@ -189,14 +189,28 @@
                 Gallery Auli Wisata
             </h1>
             <div class="images">
-                <div class="item1"><img src="assets/img/gallery/g1.png" alt=""></div>
-                <div class="item2"><img src="assets/img/gallery/g2.png" alt=""></div>
-                <div class="item3"><img src="assets/img/gallery/g3.png" alt=""></div>
-                <div class="item4"><img src="assets/img/gallery/g4.png" alt=""></div>
-                <div class="item5"><img src="assets/img/gallery/g5.png" alt=""></div>
-                <div class="item6"><img src="assets/img/gallery/g6.png" alt=""></div>
-                <div class="item7"><img src="assets/img/gallery/g7.png" alt=""></div>
+                @foreach ($galleries as $gall)
+                    <div type="button" data-bs-toggle="modal" data-bs-target="#modal-{{ $gall['id'] }}"
+                        class="item{{ $loop->iteration }}">
+                        <img src="{{ $gall['thumbnail'] }}" alt="">
+                    </div>
+                    <div class="modal fade" id="modal-{{ $gall['id'] }}" tabindex="-1">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body" style="padding: 0px">
+                                    <img src="{{ $gall['thumbnail'] }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
+            <div class="button">
+                <a type="button" href="/gallery" class="btn btn-gallery">
+                    Lihat Selengkapnya...
+                </a>
+            </div>
+
         </div>
     </section>
 

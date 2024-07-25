@@ -187,26 +187,10 @@
 
 @section('js')
     <!-- Splide JS -->
-    {{-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var splide = new Splide('.splide', {
-                type: 'loop',
-                drag: 'free',
-                focus: 'center',
-                perPage: 4,
-                // autoWidth: true,
-                autoHeight: true,
-                arrows: false,
-                pagination: false,
-                gap: 20,
-            });
-            splide.mount(window.splide.Extensions);
-        });
-    </script> --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Select all sections with the class 'splide-section'
-            var splideSections = document.querySelectorAll('.splide-section');
+            var = document.querySelectorAll('.splide-section');
 
             // Configuration options for Splide
             var splideConfig = {

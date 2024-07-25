@@ -37,6 +37,10 @@
     </script>
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
+    {{-- Masonry --}}
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
     <title>Auli Wisata</title>
     <link rel="icon" type="image/x-icon" href="/assets/img/tab.png">
 </head>

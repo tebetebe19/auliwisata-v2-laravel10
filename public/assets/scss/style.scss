@@ -45,6 +45,16 @@ button {
     }
 }
 
+.btn-gallery {
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: smaller;
+    &:hover {
+        color: white;
+    }
+}
+
 .section-title {
     margin-bottom: 24px;
     font-size: 24px;
@@ -341,6 +351,10 @@ nav {
         .item7 {
             grid-area: seven;
         }
+    }
+    .button {
+        margin-top: 24px;
+        text-align: right;
     }
 }
 
@@ -795,6 +809,40 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+#gallery-page {
+    margin-top: 24px;
+    h1,
+    h2 {
+        font-family: $font-kanit;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    hr {
+        color: #ff7a07;
+        height: 2px;
+        width: 25%;
+        opacity: 100%;
+        margin: 10px 0px 15px 0px;
+    }
+    .row > div {
+        margin-bottom: 24px;
+        img {
+            max-height: calc(100vh - 225px);
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            border-radius: 5px;
         }
     }
 }
