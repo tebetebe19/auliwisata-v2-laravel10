@@ -8,7 +8,7 @@ class ProductsController extends Controller
 {
     public function test($slug = null)
     {
-        $apiKey = env('AIRTABLE_KEY_DEV');
+        $apiKey = env('AIRTABLE_KEY');
         $baseId = env('AIRTABLE_BASE_ID');
         $tableIDproducts = env('AIRTABLE_TABLE_ID_PRODUCTS');
         $tableIDhotels = env('AIRTABLE_TABLE_ID_HOTELS');
@@ -18,6 +18,8 @@ class ProductsController extends Controller
         // Fetch Gallery Start
         $responseGalleries = Http::withHeaders(['Authorization' => 'Bearer '.$apiKey])
             ->get('https://api.airtable.com/v0/'.$baseId.'/'.$tableIDgalleries);
+
+        return response($responseGalleries);
         $galleries = json_decode($responseGalleries, true)['records'];
 
         // return response($galleries);
