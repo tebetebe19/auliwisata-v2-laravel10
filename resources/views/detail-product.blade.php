@@ -128,10 +128,6 @@
                                                         {{ $att['attractionName'] }}
                                                     </a>
                                                 @endforeach
-                                                <a href="#" target="blank_">
-                                                    <i class="fas fa-utensils"></i>
-                                                    Al-Baik Restaurant
-                                                </a>
                                             </div>
                                         </div>
                                     </div>
