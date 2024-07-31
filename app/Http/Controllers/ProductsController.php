@@ -19,7 +19,7 @@ class ProductsController extends Controller
         $responseGalleries = Http::withHeaders(['Authorization' => 'Bearer '.$apiKey])
             ->get('https://api.airtable.com/v0/'.$baseId.'/'.$tableIDgalleries);
 
-        return response($responseGalleries);
+        // return response($responseGalleries);
         $galleries = json_decode($responseGalleries, true)['records'];
 
         // return response($galleries);
