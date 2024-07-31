@@ -107,7 +107,7 @@ class ProductsController extends Controller
                 'airlines' => $airlines,
                 'flightDeparture' => $resultDPT,
                 'flightReturn' => $resultRTN,
-                'hotel' => $pd['fields']['hotel'],
+                'hotel' => $pd['fields']['hotel'] ?? [],
                 'itinerary' => $pd['fields']['itinerary'],
                 'price' => $price,
                 'is_full' => isset($pd['fields']['is_full']) ? true : false,
@@ -132,25 +132,29 @@ class ProductsController extends Controller
         // Restructure hotel start
         foreach ($hotels as $ht) {
             // Restructure attraction start
-            $transformedAttraction = [];
-            for ($i = 0; $i < count($ht['fields']['attractionCategory']); ++$i) {
-                $transformedAttraction[] = [
-                    'attractionCategory' => isset($ht['fields']['attractionCategory'][$i]) ? $ht['fields']['attractionCategory'][$i] : [],
-                    'attractionLocation' => isset($ht['fields']['attractionLocation'][$i]) ? $ht['fields']['attractionLocation'][$i] : [],
-                    'attractionName' => isset($ht['fields']['attractionName'][$i]) ? $ht['fields']['attractionName'][$i] : [],
-                ];
+            if (isset($ht['fields']['attractionCategory'])) {
+                $transformedAttraction = [];
+                for ($i = 0; $i < count($ht['fields']['attractionCategory']); ++$i) {
+                    $transformedAttraction[] = [
+                        'attractionCategory' => isset($ht['fields']['attractionCategory'][$i]) ? $ht['fields']['attractionCategory'][$i] : [],
+                        'attractionLocation' => isset($ht['fields']['attractionLocation'][$i]) ? $ht['fields']['attractionLocation'][$i] : [],
+                        'attractionName' => isset($ht['fields']['attractionName'][$i]) ? $ht['fields']['attractionName'][$i] : [],
+                    ];
+                }
+                $resultAttraction = $transformedAttraction;
+            } else {
+                $resultAttraction = [];
             }
-            $resultAttraction = $transformedAttraction;
             // Restructure attraction end
 
             $transHotel = [
                 'id' => $ht['id'],
-                'thumbnail' => $ht['fields']['thumbnail'][0]['url'],
-                'name' => $ht['fields']['name'],
-                'star' => $ht['fields']['star'],
-                'city' => $ht['fields']['city'],
-                'masjid' => $ht['fields']['nearestMasjid'],
-                'location' => $ht['fields']['location'],
+                'thumbnail' => $ht['fields']['thumbnail'][0]['url'] ?? null,
+                'name' => $ht['fields']['name'] ?? null,
+                'star' => $ht['fields']['star'] ?? null,
+                'city' => $ht['fields']['city'] ?? null,
+                'masjid' => $ht['fields']['nearestMasjid'] ?? null,
+                'location' => $ht['fields']['location'] ?? null,
                 'attractions' => $resultAttraction,
             ];
             $simpleHotel[] = $transHotel;
@@ -172,9 +176,13 @@ class ProductsController extends Controller
         // Restructure itin start
 
         foreach ($itins as $itin) {
-            $simplegal = [];
-            foreach ($itin['fields']['gallery'] as $gal) {
-                $simplegal[] = $gal['url'];
+            if (isset($itin['fields']['gallery'])) {
+                $simplegal = [];
+                foreach ($itin['fields']['gallery'] as $gal) {
+                    $simplegal[] = $gal['url'];
+                }
+            } else {
+                $simplegal = [];
             }
 
             $transItin = [
@@ -191,6 +199,8 @@ class ProductsController extends Controller
         // return response($itins);
 
         // Restructure itin end
+
+        // return response($products);
 
         // Mapping products with hotels start
         $products = array_map(function ($products) use ($hotels, $itins) {
@@ -242,7 +252,7 @@ class ProductsController extends Controller
         $international = collect($products)->where('type', 'international');
         $keywords = implode(',', array_column($products, 'slug'));
 
-        // return response($galleries);
+        // return response($umroh);
 
         if ($slug != null) {
             return view('detail-product', compact('products'));

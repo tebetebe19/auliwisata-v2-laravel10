@@ -104,7 +104,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="container package-international" {{ isset($internationl) ? '' : 'hidden' }}>
+        <div class="container package-international">
             <h1 class="section-title">
                 Paket International
             </h1>
