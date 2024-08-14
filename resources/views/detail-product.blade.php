@@ -3,96 +3,116 @@
 @section('content')
     <div class="container" id="detail">
         <div class="row">
-            <div class="col-lg-12">
-                <img class="hero" src="{{ $products[0]['thumbnail'] }}" alt="">
-            </div>
-            {{-- <div class="col-lg-12">
-                <div class="splide" role="group" aria-label="Splide Basic HTML Example">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            @foreach ($products[0]['gallery'] as $gal)
-                                <li class="splide__slide"><img src="{{ $gal }}" alt=""></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div> --}}
             <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="title">
-                            Penerbangan
-                        </div>
-                        <hr>
-                        <div class="card-flight">
-                            <div class="airlines">
-                                <div class="bag">
-                                    <img src="{{ $products[0]['airlines']['airlinesIcon'] }}" alt="">
-                                    <span class="name">{{ $products[0]['airlines']['airlinesName'] }}
-                                        [{{ $products[0]['airlines']['airlinesCode'] }}]</span>
-                                </div>
-                                <div class="airlines-class">Business</div>
-                            </div>
-                            <div class="item-title">
-                                Keberangkatan
-                                <hr>
-                            </div>
-                            <div class="schedule" style="margin-bottom: 20px">
-                                @foreach ($products[0]['flightDeparture'] as $fl)
-                                    <div class="flight">
-                                        @if ($loop->first)
-                                            <i class="fas flight-icon fa-plane-departure"></i>
-                                        @elseif ($loop->last)
-                                            <i class="fas flight-icon fa-plane-arrival"></i>
-                                        @else
-                                            <i class="fas flight-icon fa-plane"></i>
-                                        @endif
-                                        <div class="airport">
-                                            {{ $fl['airportDepartureCode'] }}, {{ $fl['airportDepartureName'] }}
-                                        </div>
-                                    </div>
-                                    @if (!$loop->last)
-                                        <div class="separator">.</div>
-                                    @endif
-                                @endforeach
-                            </div>
-                            <div class="item-title">
-                                Kepulangan
-                                <hr>
-                            </div>
-                            <div class="schedule">
-                                @foreach ($products[0]['flightReturn'] as $fl)
-                                    <div class="flight">
-                                        @if ($loop->first)
-                                            <i class="fas flight-icon fa-plane-departure"></i>
-                                        @elseif ($loop->last)
-                                            <i class="fas flight-icon fa-plane-arrival"></i>
-                                        @else
-                                            <i class="fas flight-icon fa-plane"></i>
-                                        @endif
-                                        <div class="airport">
-                                            {{ $fl['airportReturnCode'] }}, {{ $fl['airportReturnName'] }}
-                                        </div>
-                                    </div>
-                                    @if (!$loop->last)
-                                        <div class="separator">.</div>
-                                    @endif
-                                @endforeach
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-12">
+                        <img class="hero" src="{{ $products[0]['thumbnail'] }}" alt="">
                     </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="title">
-                            Hotel
-                        </div>
-                        <hr>
+                    <div class="col-lg-7 col-md-12 col-12">
                         <div class="row">
-                            @foreach ($products[0]['hotel'] as $ht)
-                                <div class="col-12">
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="title">
+                                            Penerbangan
+                                        </div>
+                                        <hr>
+                                        <div class="card-flight">
+                                            <div class="airlines">
+                                                <div class="bag">
+                                                    <img src="{{ $products[0]['airlines']['airlinesIcon'] }}"
+                                                        alt="">
+                                                    <span class="name">{{ $products[0]['airlines']['airlinesName'] }}
+                                                        [{{ $products[0]['airlines']['airlinesCode'] }}]</span>
+                                                </div>
+                                                <div class="airlines-class">Business</div>
+                                            </div>
+                                            <div class="item-title">
+                                                Keberangkatan
+                                                <hr>
+                                            </div>
+                                            <div class="schedule" style="margin-bottom: 20px">
+                                                @foreach ($products[0]['flightDeparture'] as $fl)
+                                                    <div class="flight">
+                                                        @if ($loop->first)
+                                                            <i class="fas flight-icon fa-plane-departure"></i>
+                                                        @elseif ($loop->last)
+                                                            <i class="fas flight-icon fa-plane-arrival"></i>
+                                                        @else
+                                                            <i class="fas flight-icon fa-plane"></i>
+                                                        @endif
+                                                        <div class="airport">
+                                                            {{ $fl['airportDepartureCode'] }},
+                                                            {{ $fl['airportDepartureName'] }}
+                                                        </div>
+                                                    </div>
+                                                    @if (!$loop->last)
+                                                        <div class="separator">.</div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+                                            <div class="item-title">
+                                                Kepulangan
+                                                <hr>
+                                            </div>
+                                            <div class="schedule">
+                                                @foreach ($products[0]['flightReturn'] as $fl)
+                                                    <div class="flight">
+                                                        @if ($loop->first)
+                                                            <i class="fas flight-icon fa-plane-departure"></i>
+                                                        @elseif ($loop->last)
+                                                            <i class="fas flight-icon fa-plane-arrival"></i>
+                                                        @else
+                                                            <i class="fas flight-icon fa-plane"></i>
+                                                        @endif
+                                                        <div class="airport">
+                                                            {{ $fl['airportReturnCode'] }}, {{ $fl['airportReturnName'] }}
+                                                        </div>
+                                                    </div>
+                                                    @if (!$loop->last)
+                                                        <div class="separator">.</div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="title">
+                                            Hotel
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            @foreach ($products[0]['hotel'] as $ht)
+                                                <div class="col-6">
+                                                    <div class="card-hotel-new">
+                                                        <img src="{{ $ht['thumbnail'] }}" alt="">
+                                                        <div class="hotel">
+                                                            <div class="name">
+                                                                {{ $ht['name'] }}
+                                                            </div>
+                                                            <div class="bag">
+                                                                <div class="star">
+                                                                    @for ($i = 0; $i < $ht['star']; $i++)
+                                                                        <i class="fas fa-star"></i>
+                                                                    @endfor
+
+                                                                </div>
+                                                                <div class="city">
+                                                                    <a href="{{ $ht['location'] }}" target="blank">
+                                                                        <i class="fas fa-location-arrow"></i>
+                                                                        {{ $ht['city'] }}
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{-- <div class="col-12">
                                     <div class="card-hotel">
                                         <img src="{{ $ht['thumbnail'] }}" alt="">
                                         <div class="information">
@@ -131,8 +151,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> --}}
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
-                            @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,7 +210,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Select all sections with the class 'splide-section'
-            var = document.querySelectorAll('.splide-section');
+            var splideSections = document.querySelectorAll('.splide-section'); // Corrected variable name
 
             // Configuration options for Splide
             var splideConfig = {
@@ -198,8 +222,7 @@
                 pagination: false,
                 gap: 20,
                 autoplay: true,
-                interval: 1000,
-                // pauseOnHover: true,
+                interval: 3000,
                 perPage: 4,
                 breakpoints: {
                     768: {

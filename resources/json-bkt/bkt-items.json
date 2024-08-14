@@ -9,5 +9,22 @@
         "item_price": "20000000",
         "is_boosted": true,
         "is_verified": true
+    },
+    {
+        "item_code": "string",
+        "item_name": "string",
+        "item_slug": "string",
+        "item_images": [
+            "https://assets",
+            "https://assets",
+            "https://assets"
+        ],
+        "item_price": "string",
+        "item_type": "string",
+        "item_condition": "string",
+        "item_brand": "string",
+        "item_category": "string",
+        "is_boosted": true,
+        "is_verified": true
     }
 ]

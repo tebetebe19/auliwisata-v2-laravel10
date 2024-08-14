@@ -7,8 +7,8 @@
                     <p>Kantor Pusat</p>
                     <p>
                         PT Auli Wisata Utama, <br>
-                        Jl. Letjen Suprapto Kav. 20 No.14 <br>
-                        Jakarta Pusat 10510, Telp. 021 421 2938.
+                        Jl. Joe Kelapa 3 no.41C <br>
+                        Jagakarsa, Jakarta Selatan
                     </p>
                 </div>
                 <div class="col-lg-2">

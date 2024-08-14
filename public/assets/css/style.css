@@ -452,13 +452,15 @@ footer #footline .icons {
     gap: 20px;
   }
 }
+#detail {
+  margin-top: 24px;
+}
 #detail .row > div {
   margin-bottom: 24px;
 }
 #detail .row > div .hero {
   object-fit: cover;
   border-radius: 8px;
-  aspect-ratio: 4/1;
   width: 100%;
 }
 #detail .row > div .splide .splide__slide img {
@@ -691,6 +693,33 @@ footer #footline .icons {
   #detail .row > div .card .card-body .card-hotel .information .attraction a i {
     margin-right: 5px;
   }
+}
+#detail .row > div .card .card-body .card-hotel-new img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+#detail .row > div .card .card-body .card-hotel-new .hotel .name {
+  font-weight: bolder;
+  font-size: larger;
+}
+#detail .row > div .card .card-body .card-hotel-new .hotel .bag {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+#detail .row > div .card .card-body .card-hotel-new .hotel .bag .star {
+  color: gold;
+  font-size: smaller;
+}
+#detail .row > div .card .card-body .card-hotel-new .hotel .bag .city {
+  display: inline-block;
+  color: #ff7a07;
+  font-size: smaller;
+  background-color: rgba(255, 122, 7, 0.1019607843);
+  padding: 8px 16px;
+  border-radius: 30px;
 }
 #detail .row > div .accordion {
   font-family: "Lato", sans-serif;

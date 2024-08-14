@@ -488,13 +488,13 @@ footer {
 }
 
 #detail {
+    margin-top: 24px;
     .row {
         > div {
             margin-bottom: 24px;
             .hero {
                 object-fit: cover;
                 border-radius: 8px;
-                aspect-ratio: 4/1;
                 width: 100%;
             }
             .splide {
@@ -761,6 +761,37 @@ footer {
                                             margin-right: 5px;
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                    .card-hotel-new {
+                        img {
+                            aspect-ratio: 16/9;
+                            width: 100%;
+                            border-radius: 10px;
+                            object-fit: cover;
+                        }
+                        .hotel {
+                            .name {
+                                font-weight: bolder;
+                                font-size: larger;
+                            }
+                            .bag {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 5px;
+                                .star {
+                                    color: gold;
+                                    font-size: smaller;
+                                }
+                                .city {
+                                    display: inline-block;
+                                    color: #ff7a07;
+                                    font-size: smaller;
+                                    background-color: #ff7a071a;
+                                    padding: 8px 16px;
+                                    border-radius: 30px;
                                 }
                             }
                         }
