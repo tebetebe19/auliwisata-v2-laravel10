@@ -42,7 +42,7 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 
-    <title>Auliii Wisataaa</title>
+    <title>Auli Wisata</title>
     <link rel="icon" type="image/x-icon" href="/assets/img/tab.png">
 </head>
 
