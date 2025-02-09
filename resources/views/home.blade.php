@@ -31,14 +31,14 @@
             <h1 class="section-title">
                 Paket Umroh
             </h1>
-            <div class="row">
-                @foreach ($umroh as $item)
+            <div class="row"> 
+                {{--  @foreach ($umroh as $item)
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="/{{ $item['slug'] }}">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-img">
-                                        {{-- <div id="{{ $item['slug'] }}" class="carousel slide" data-bs-ride="carousel">
+                                        <div id="{{ $item['slug'] }}" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
                                                     <img src="{{ $item['thumbnail'] }}">
@@ -59,7 +59,7 @@
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
-                                        </div> --}}
+                                        </div>
                                         <img src="{{ $item['thumbnail'] }}">
                                         {!! $item['is_full'] == true ? '<div class="overlay">CLOSED</div>' : '' !!}
 
@@ -101,7 +101,8 @@
                             </div>
                         </a>
                     </div>
-                @endforeach
+                @endforeach --}}
+                Data Limitation
             </div>
         </div>
         <div class="container package-international">
@@ -109,7 +110,7 @@
                 Paket International
             </h1>
             <div class="row">
-                @foreach ($international as $item)
+               {{-- @foreach ($international as $item)
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="/{{ $item['slug'] }}">
                             <div class="card">
@@ -178,7 +179,8 @@
                             </div>
                         </a>
                     </div>
-                @endforeach
+                @endforeach --}}
+                                        Data Limitation
             </div>
         </div>
     </section>
@@ -189,7 +191,7 @@
                 Gallery Auli Wisata
             </h1>
             <div class="images">
-                @foreach ($galleries as $gall)
+                {{-- @foreach ($galleries as $gall)
                     <div type="button" data-bs-toggle="modal" data-bs-target="#modal-{{ $gall['id'] }}"
                         class="item{{ $loop->iteration }}">
                         <img src="{{ $gall['thumbnail'] }}" alt="">
@@ -203,7 +205,8 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
+                Data Limitation
             </div>
             <div class="button">
                 <a type="button" href="/gallery" class="btn btn-gallery">
