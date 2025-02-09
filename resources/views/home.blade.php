@@ -32,7 +32,7 @@
                 Paket Umroh
             </h1>
             <div class="row"> 
-                {{--  @foreach ($umroh as $item)
+                @foreach ($umroh as $item)
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="/{{ $item['slug'] }}">
                             <div class="card">
@@ -88,7 +88,7 @@
                                         </div>
                                     </div>
                                     {!! $item['seat_left'] <= 0 ? '<p>PENUH</p>' : '<p>Sisa ' . $item['seat_left'] . '</p>' !!}
-                                </div> --}}
+                                </div>
                                     <hr>
                                     <div class="card-price">
                                         Rp {{ number_format($item['price']['priceNormal'], 0, ',', '.') }}
@@ -116,7 +116,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-img">
-                                        {{-- <div id="{{ $item['slug'] }}" class="carousel slide" data-bs-ride="carousel">
+                                        <div id="{{ $item['slug'] }}" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
                                                     <img src="{{ $item['thumbnail'] }}">
@@ -137,7 +137,7 @@
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
-                                        </div> --}}
+                                        </div>
                                         <img src="{{ $item['thumbnail'] }}">
                                         {!! $item['is_full'] == true ? '<div class="overlay">CLOSED</div>' : '' !!}
 
